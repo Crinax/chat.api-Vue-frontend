@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
+    <button v-on:click="sendMessage()">Отправить сообщение</button>
     <h1>{{ msg }}</h1>
+    <h1>{{ ws }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -39,6 +41,25 @@ import { Options, Vue } from 'vue-class-component'
 @Options({
   props: {
     msg: String
+  },
+  data: function ():Record<string, unknown> {
+    return {
+      ws: null
+    }
+  },
+  methods: {
+    sendMessage: function ():void {
+      const a = { target: 'users', body: {} }
+      this.ws.send(JSON.stringify(a))
+    }
+  },
+  created: function ():void {
+    this.ws = new WebSocket('ws://localhost:9000/')
+    this.ws.onopen = (event: Event):void => { console.log(event) }
+    this.ws.onclose = ():void => { console.log('Сервер прервал соединение') }
+    this.ws.onmessage = (event: MessageEvent):void => {
+      console.log(event.data)
+    }
   }
 })
 export default class HelloWorld extends Vue {

@@ -1,27 +1,4 @@
-<template>
-  <router-link to="/" class="chat-list-link">Список чатов</router-link>
-  <router-view/>
-</template>
-
-<style lang="scss">
-$bg-color: #ddd;
-$accent-color: #55f;
-$accent-color-highest: #88f;
-$button-color: #5f5;
-$blocked-button-color: #aaa;
-$text-color: #333;
-$bubble-color-recipient: #ccf;
-$bubble-color-user-1: #62f;
-$bubble-color-user-2: #92f;
-#app {
-  width: 95vw;
-  height: 95vh;
-  display: flex;
-  flex-direction: column;
-}
-.chat-list-link {
-  align-self: center;
-}
+@import 'colors';
 * {
     color: $text-color;
     font-family: sans-serif;
@@ -42,8 +19,6 @@ body {
     box-shadow: 0 0 5vw $accent-color-highest;
     display: flex;
     justify-content: center;
-    align-self: center;
-    margin-top: 2vh;
 
     .messages-wrapper {
       width: 55vw;
@@ -162,4 +137,3 @@ body {
     }
   }
 }
-</style>
