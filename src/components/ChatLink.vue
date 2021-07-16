@@ -1,6 +1,6 @@
 <template>
   <div v-if="userId != '1'" class="">
-    <router-link :to="'/room/' + userId" class="chat-link ripple">Пользователь: {{ userId }}</router-link>
+    <router-link :to="'/room/' + userId" class="chat-link" exact>Пользователь: {{ userId }}</router-link>
   </div>
 </template>
 <script lang="ts">

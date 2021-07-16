@@ -1,6 +1,8 @@
 <template>
-  <router-link to="/" class="chat-list-link">Список чатов</router-link>
-  <router-view/>
+  <div id="app">
+    <router-link to="/" class="chat-list-link" exact>Список чатов</router-link>
+    <router-view :key="$route.path"></router-view>
+  </div>
 </template>
 
 <style lang="scss">

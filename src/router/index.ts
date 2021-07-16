@@ -10,7 +10,7 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: '/room/:id',
-    name: 'Chat Room',
+    name: 'Room',
     component: Room
   }
 ]
@@ -19,5 +19,4 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes
 })
-
 export default router
