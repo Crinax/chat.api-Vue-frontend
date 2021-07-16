@@ -1,24 +1,24 @@
-# frontend
+# Chat.api Frontend
 
 ## Project setup
+##### npm
+```sh
+npm install
 ```
+##### yarn
+```sh
 yarn install
 ```
+## Installing servers
+[Chat.api Backend](https://github.com/Crinax/chat.api-backend-ts-websocket) - Clone this repository and follow installation instruction
 
-### Compiles and hot-reloads for development
+## Run app
+##### npm
+```sh
+npm serve
 ```
+##### yarn
+```sh
 yarn serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
